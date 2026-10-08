@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Pendo pairing deep link (debug builds only) -->
+        <activity
+            android:name="sdk.pendo.io.activities.PendoGateActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="${pendoScheme}" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
